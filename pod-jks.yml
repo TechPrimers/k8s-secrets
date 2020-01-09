@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret-example
+spec:
+    volumes:
+      - name: secret-volume
+        secret:
+          secretName: jks-secret
+    containers:
+      - name: secret-example
+        image: alpine:latest
+        command: ["sleep", "9999"]
+        volumeMounts:
+          - name: secret-volume
+            mountPath: /etc/secret-volume
