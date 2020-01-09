@@ -1,2 +1,2 @@
 # Kubernetes Secrets
-`kubectl create secret generic jks-secret --from-file https-examples.jks`
+ - Command for creating the secret - `kubectl create secret generic jks-secret --from-file https-examples.jks`
